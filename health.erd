@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<diagram version="1" name="health">
+	<entities>
+		<data-source id="mysql8-17628e548ab-4b85ddf9bdd50889">
+			<entity id="1" name="event_usefulness" fq-name="health.event_usefulness">
+				<path name="health"/>
+			</entity>
+			<entity id="2" name="events" fq-name="health.events">
+				<path name="health"/>
+			</entity>
+			<entity id="3" name="imt" fq-name="health.imt">
+				<path name="health"/>
+			</entity>
+			<entity id="4" name="medical_recommendations" fq-name="health.medical_recommendations">
+				<path name="health"/>
+			</entity>
+			<entity id="5" name="personal_recommendations" fq-name="health.personal_recommendations">
+				<path name="health"/>
+			</entity>
+			<entity id="6" name="status_health" fq-name="health.status_health">
+				<path name="health"/>
+			</entity>
+			<entity id="7" name="status_healths" fq-name="health.status_healths">
+				<path name="health"/>
+			</entity>
+			<entity id="8" name="type_events" fq-name="health.type_events">
+				<path name="health"/>
+			</entity>
+			<entity id="9" name="type_health" fq-name="health.type_health">
+				<path name="health"/>
+			</entity>
+			<entity id="10" name="users" fq-name="health.users">
+				<path name="health"/>
+			</entity>
+		</data-source>
+	</entities>
+	<relations>
+		<relation name="events_ibfk_3" fq-name="health.events.events_ibfk_3" type="fk" pk-ref="1" fk-ref="2"/>
+		<relation name="status_health_ibfk_5" fq-name="health.status_health.status_health_ibfk_5" type="fk" pk-ref="2" fk-ref="6"/>
+		<relation name="status_health_ibfk_4" fq-name="health.status_health.status_health_ibfk_4" type="fk" pk-ref="3" fk-ref="6"/>
+		<relation name="personal_recommendations_ibfk_1" fq-name="health.personal_recommendations.personal_recommendations_ibfk_1" type="fk" pk-ref="4" fk-ref="5"/>
+		<relation name="status_health_ibfk_3" fq-name="health.status_health.status_health_ibfk_3" type="fk" pk-ref="5" fk-ref="6"/>
+		<relation name="status_health_ibfk_6" fq-name="health.status_health.status_health_ibfk_6" type="fk" pk-ref="7" fk-ref="6"/>
+		<relation name="events_ibfk_2" fq-name="health.events.events_ibfk_2" type="fk" pk-ref="8" fk-ref="2"/>
+		<relation name="status_health_ibfk_1" fq-name="health.status_health.status_health_ibfk_1" type="fk" pk-ref="9" fk-ref="6"/>
+		<relation name="events_ibfk_1" fq-name="health.events.events_ibfk_1" type="fk" pk-ref="10" fk-ref="2"/>
+		<relation name="imt_ibfk_1" fq-name="health.imt.imt_ibfk_1" type="fk" pk-ref="10" fk-ref="3"/>
+		<relation name="status_health_ibfk_2" fq-name="health.status_health.status_health_ibfk_2" type="fk" pk-ref="10" fk-ref="6"/>
+	</relations>
+</diagram>
